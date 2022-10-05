@@ -1,33 +1,45 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route, RedirectFunction, Routes } from "react-router-dom";
 
+
+// layouts
+
+import Admin from "./layouts/Admin";
+// import Auth from "./layouts/Auth.js";
+import Auth from "./layouts/Auth"
+
+// views without layouts
+
+import Landing from "./views/Landing";
+import Profile from "./views/Profile";
+import Dashboard from "./views/admin/Dashboard";
+import Maps from "./views/admin/Maps";
+import Settings from "./views/admin/Settings";
+import Tables from "./views/admin/Tables";
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <BrowserRouter>
+    <Routes>
+      {/* add routes with layouts */}
+      <Route path="/admin" element={<Admin/>} >
+      <Route path="/admin/dashboard" element={<Dashboard />} />
+            <Route path="/admin/maps" element={<Maps />} />
+            <Route path="/admin/settings" element={<Settings />} />
+            <Route path="/admin/tables" element={<Tables />} />
+      </Route>
+      <Route path="/auth" element={<Auth />} />
+      {/* add routes without layouts */}
+      <Route path="/"  element={<Landing />} />
+      <Route path="/profile"  element={<Profile />} />
+      
+      {/* add redirect for first page */}
+      {/* <Redirect from="*" to="/" /> */}
+
+    </Routes>
+  </BrowserRouter>
   )
 }
 
