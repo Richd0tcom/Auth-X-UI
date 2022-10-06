@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, redirect } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 // components
 
@@ -11,7 +11,8 @@ import FooterSmall from "../components/Footers/FooterSmall";
 import Login from "../views/auth/Login";
 import Register from "../views/auth/Register";
 
-// const xhiuoeu = require("assets/img/register_bg_2.png").default
+
+// const xhiuoeu = require("assets/img/register_bg_2.png")
 
 export default function Auth() {
   return (
@@ -22,14 +23,10 @@ export default function Auth() {
           <div
             className="absolute top-0 w-full h-full bg-slate-800 bg-no-repeat bg-full"
             style={{
-              backgroundImage: "url(" + +")",
+              backgroundImage: `url("../assets/img/register_bg_2.png")`,
             }}
           ></div>
-          <Routes>
-            <Route path="/auth/login" element={<Login />} />
-            <Route path="/auth/register" element={<Register />} />
-            {/* <Redirect from="/auth" to="/auth/login" /> */}
-          </Routes>
+          <Outlet />
           <FooterSmall absolute />
         </section>
       </main>

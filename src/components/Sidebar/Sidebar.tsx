@@ -93,7 +93,7 @@ export default function Sidebar() {
                       : "text-slate-700 hover:text-slate-500")
                   }
                   to="/admin/dashboard"
-                >
+                  >
                   <i
                     className={
                       "fas fa-tv mr-2 text-sm " +
@@ -110,16 +110,16 @@ export default function Sidebar() {
                 <Link
                   className={
                     "text-xs uppercase py-3 font-bold block " +
-                    (window.location.href.indexOf("/admin/settings") !== -1
+                    (window.location.href.indexOf("/admin/dashboard/settings") !== -1
                       ? "text-sky-500 hover:text-sky-600"
                       : "text-slate-700 hover:text-slate-500")
                   }
-                  to="/admin/settings"
+                  to="/admin/dashboard/settings/profile"
                 >
                   <i
                     className={
                       "fas fa-tools mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/settings") !== -1
+                      (window.location.href.indexOf("/admin/dashboard/settings") !== -1
                         ? "opacity-75"
                         : "text-slate-300")
                     }
@@ -132,7 +132,7 @@ export default function Sidebar() {
                 <Link
                   className={
                     "text-xs uppercase py-3 font-bold block " +
-                    (window.location.href.indexOf("/admin/tables") !== -1
+                    (window.location.href.indexOf("/admin/dashboard/tables") !== -1
                       ? "text-sky-500 hover:text-sky-600"
                       : "text-slate-700 hover:text-slate-500")
                   }
@@ -141,7 +141,7 @@ export default function Sidebar() {
                   <i
                     className={
                       "fas fa-table mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/tables") !== -1
+                      (window.location.href.indexOf("/admin/dashboard/tables") !== -1
                         ? "opacity-75"
                         : "text-slate-300")
                     }
@@ -154,7 +154,7 @@ export default function Sidebar() {
                 <Link
                   className={
                     "text-xs uppercase py-3 font-bold block " +
-                    (window.location.href.indexOf("/admin/maps") !== -1
+                    (window.location.href.indexOf("/admin/dashboard/maps") !== -1
                       ? "text-sky-500 hover:text-sky-600"
                       : "text-slate-700 hover:text-slate-500")
                   }
@@ -163,7 +163,7 @@ export default function Sidebar() {
                   <i
                     className={
                       "fas fa-map-marked mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/maps") !== -1
+                      (window.location.href.indexOf("/admin/dashboard/maps") !== -1
                         ? "opacity-75"
                         : "text-slate-300")
                     }
