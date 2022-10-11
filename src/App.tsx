@@ -14,7 +14,7 @@ import Auth from "./layouts/Auth"
 import Landing from "./views/Landing";
 import Profile from "./views/Profile";
 import Dashboard from "./views/admin/Dashboard";
-import Maps from "./views/admin/Maps";
+
 import Settings from "./views/admin/Settings";
 import Tables from "./views/admin/Tables";
 import Register from './views/auth/Register';
@@ -25,14 +25,14 @@ import CardProfile from "./components/Cards/CardProfile";
 
 function DeveloperSettings(){
   return (
-    <div className="w-full lg:w-8/12 px-4">
+    <div className="w-full lg:w-8/12 px-4 mt-32">
           <CardSettings />
     </div>
   )
 }
 function DeveloperProfile(){
   return (
-    <div className="w-full  px-4">
+    <div className="w-full  px-4 mt-32">
           <CardProfile />
     </div>
   )
@@ -46,13 +46,13 @@ function App() {
     <Routes>
       {/* add routes with layouts */}
       <Route path="/admin" element={<Admin/>} >
-      <Route path="/admin/dashboard" element={<Dashboard />} />
-            <Route path="/admin/dashboard/maps" element={<Maps />} />
-            <Route path="/admin/dashboard/settings" element={<Settings />} >
-                <Route path="/admin/dashboard/settings/edit" element={<DeveloperSettings/>}/>
-                <Route path="/admin/dashboard/settings/profile" element={<DeveloperProfile/>}/>
-            </Route>
-            <Route path="/admin/dashboard/tables" element={<Tables />} />
+        <Route path="/admin/dashboard" element={<Dashboard />} />
+              <Route path="/admin/dashboard/settings" element={<Settings />} >
+                  <Route path="/admin/dashboard/settings/edit" element={<DeveloperSettings/>}/>
+                  <Route path="/admin/dashboard/settings/profile" element={<DeveloperProfile/>}/>
+              </Route>
+        
+        <Route path="/admin/dashboard/docs" element={<Tables />} />
       </Route>
       <Route path="/auth" element={<Auth />} >
             <Route path="/auth/login" element={<Login />} />

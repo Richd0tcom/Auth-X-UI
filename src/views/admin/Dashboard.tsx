@@ -1,15 +1,18 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 // components
 
 
 import CardPageVisits from "../../components/Cards/CardPageVisits";
 import CardSocialTraffic from "../../components/Cards/CardSocialTraffic";
+import HeaderStats from "../../components/Headers/HeaderStats";
 
 export default function Dashboard() {
   return (
     <>
       <div className="flex flex-wrap">
+        
         <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
          
         </div>
@@ -17,6 +20,11 @@ export default function Dashboard() {
       
         </div>
       </div>
+      <div className="mt-12">
+        {/* Header */}
+        <HeaderStats />
+      </div>
+      
       <div className="flex flex-wrap mt-4">
         <div className="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
           <CardPageVisits />
@@ -24,6 +32,7 @@ export default function Dashboard() {
         <div className="w-full xl:w-4/12 px-4">
           <CardSocialTraffic />
         </div>
+        <Outlet />
       </div>
     </>
   );

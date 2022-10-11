@@ -61,7 +61,7 @@ const PagesDropdown = () => {
           Settings
         </Link>
         <Link
-          to="/admin/tables"
+          to="/admin/dashboard/docs"
           className={
             "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-slate-700"
           }

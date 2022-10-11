@@ -14,554 +14,378 @@ import Team4 from "../assets/img/team-4-470x470.png";
 export default function Landing() {
   return (
     <>
-      <Navbar transparent />
+      	<nav className="px-6 fixed w-full top-0 right-0 bg-hero flex items-center justify-center py-6 z-40">
+		<div className="flex justify-between items-center max-w-8xl w-full">
+			<div className="cursor-pointer">
+				<svg className="h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 842 168" role="img">
+				    {/* <style>.st3{fill:#2a3b47}.st1{fill:#1292ee}</style> */}
+				    <path className="st3" d="M232 31.5l-.3.1v44.7h-42.4V31.6l-.3-.1c-6.3-1.3-12.5-1.3-18.7 0l-.3.1v102.8l.3.1c3.1.6 6.2 1 9.3 1s6.2-.3 9.4-1l.3-.1V92.7h42.4v41.7l.3.1c6.2 1.3 12.5 1.3 18.7 0l.3-.1V31.6l-.3-.1c-6.3-1.2-12.5-1.2-18.7 0zM297.7 60.4c-22.2 0-35.4 14-35.4 37.5 0 12.2 2.8 21.9 8.4 28.6 6.1 7.3 15.2 11 27.3 11 20.5 0 31-12.2 32.3-24.3v-.3l-.3-.1c-5.2-1.7-10-2.1-15.7-1.3h-.2v.2c-1.2 7.2-7.2 11.5-15.9 11.5-12.2 0-18.2-6.7-18.4-20.5h51.6v-.3c1.5-13.6-1.2-24.6-7.8-32.1-6.1-6.4-15-9.9-25.9-9.9zm-.2 13.3c5.1 0 9.4 1.6 12.3 4.7 3 3.2 4.5 8 4.2 13.7h-34.2c.3-11.7 6.8-18.4 17.7-18.4zM343.9 31.5l-.3.1v102.8l.3.1c2.9.6 5.8 1 8.8 1 2.9 0 5.9-.3 8.8-1l.3-.1V31.6l-.3-.1c-5.8-1.3-11.7-1.2-17.6 0zM412.4 60.4c-7.7 0-15.8 3-23.5 8.7l-1.1-5.4-.2-.1c-4.4-1.3-8-1.3-12.3 0l-.2.1V166l.3.1c2.9.6 5.8 1 8.8 1s5.9-.3 8.8-1l.3-.1v-34.2c6.1 3.9 12.6 5.7 19.9 5.7 20.2 0 32.3-14.3 32.3-38.4-.1-24.5-12.1-38.7-33.1-38.7zM393 80.7c5.4-3.7 10.4-5.4 15.8-5.4 12.3 0 19 8.5 19 24.1 0 15.3-6.6 23.4-19.2 23.4-5.4 0-10.5-1.7-15.6-5.3V80.7zM522.6 79.1c-3.1-1.2-5.9-2.2-8.6-3.1-14-5-22.4-8-22.6-15.6-.1-3.5 1-6.5 3.4-9 3.5-3.6 9.4-5.5 16.6-5.5 7.1 0 12.6 1.9 15.9 5.4 2.8 3 4 7.1 3.7 12.2v.3l.3.1c6.1 1.2 12.2 1.1 18.8-.4l.3-.1v-.3c.4-8.6-2.2-16.1-7.5-21.7-6.6-7-17.2-10.7-30.6-10.8h-.4c-24.9 0-39.9 11.1-40.1 29.7-.1 18.5 16.9 24.7 27.1 28.3l1.5.6c3.4 1.2 6.6 2.3 9.4 3.3 13.8 4.8 22.1 7.7 22.4 15 .1 3.8-1 6.9-3.3 9.3-3.3 3.4-9.1 5.1-16.8 5-8.5 0-15-2.2-18.7-6.2-2.7-3-3.8-6.8-3.4-11.4v-.3l-.3-.1c-6.2-1.2-12.5-1.1-18.7.3l-.2.1v.3c-.5 8.3 2 15.7 7.4 21.4 7.2 7.7 19 11.7 34.2 11.6 14.9 0 39.4-4 39.6-30-.3-17.3-15.1-22.9-29.4-28.4zM596.7 75.3c12.3 0 15.2 8 15.8 12.7v.3h.3c5.7.9 11.1.5 16.3-1l.3-.1v-.3c-.5-7.2-3.6-13.7-8.7-18.4-5.8-5.3-14.1-8.2-23.9-8.2-23.4 0-36.3 13.7-36.3 38.6 0 24.8 12.8 38.5 36 38.5 10 0 18.4-2.9 24.3-8.4 4.9-4.6 7.9-10.8 8.5-17.5v-.3l-.3-.1c-4.9-1.7-10.3-2-16.2-1h-.2v.2c-1.6 11.2-12.5 12-15.8 12-12.6 0-18.5-7.5-18.5-23.6-.1-15.9 5.8-23.4 18.4-23.4zM673.7 60.4c-23 0-35.7 13.7-35.7 38.6 0 24.8 12.7 38.5 35.7 38.5 23 0 35.7-13.7 35.7-38.5 0-24.9-12.7-38.6-35.7-38.6zM692 99.1c0 15.9-6 23.6-18.3 23.6s-18.3-7.7-18.3-23.6c0-16.2 5.8-23.8 18.3-23.8 12.3 0 18.3 7.8 18.3 23.8zM767 63.7l-.3.1V115c-5.8 5-11.1 7.2-17.2 7.2-8.6 0-12.3-4.9-12.3-16.5v-42l-.3-.1c-5.8-1.4-11.7-1.4-17.6 0l-.3.1v46.1c0 17.5 9.4 27.6 25.9 27.6 8.8 0 16.5-3.4 24.8-11l1.7 8 .2.1c4.2 1.1 8.6 1.1 12.8 0l.3-.1V63.7l-.3-.1c-5.6-1.4-11.5-1.4-17.4.1zM840.1 120.7l-.1-.3-.3.1c-7 1.6-11.1 1.5-13.5-.4-2-1.6-2.9-4.4-2.9-8.8V78.5h14.2l.1-.3c1-4.8 1-9.7 0-14.6l-.1-.3h-14.2V43.9l-.3-.1c-5.8-1.3-11.7-1.3-17.5 0l-.3.1.1 19.4h-9l-.1.3c-1.1 4.8-1.1 9.8 0 14.6l.1.3h9l.1 31.5c0 8.8.5 17.7 6.6 22.8 3.3 2.7 8.1 4.1 14.3 4.1 3.8 0 8.2-.5 13.3-1.5h.2l.1-.2c1.4-4.7 1.5-9.6.2-14.5z"/>
+				    <path className="st1" d="M10.9 97.2l48.6-48.6c6.3-6.2 10.2-14.9 10.2-24.4 0-9.4-3.8-18-9.9-24.2L11.2 48.6C4.9 54.8 1 63.5 1 73c0 9.5 3.8 18 9.9 24.2zM128.6 68.8L80 117.4c-6.3 6.2-10.2 14.9-10.2 24.4 0 9.4 3.8 18 9.9 24.2l48.6-48.6c6.3-6.2 10.2-14.9 10.2-24.4 0-9.5-3.8-18-9.9-24.2zM128.3 48.7c6.3-6.2 10.2-14.9 10.2-24.4 0-9.4-3.8-18-9.9-24.2L11.2 117.4C4.9 123.7 1 132.3 1 141.9c0 9.4 3.8 18 9.9 24.2L128.3 48.7z"/>
+				</svg>
+			</div>
+			<div className="hidden lg:flex flex-grow">
+				<a href="#" className="flex items-center ml-8 text-sm text-gray-700 font-light hover:text-gray-900">Product
+						<svg className="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+						<g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+							<g id="icon-shape">
+								<polygon id="Combined-Shape" points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon></g>
+						</g>
+						</svg>
+				</a>
+				<a href="#" className="flex items-center ml-8 text-sm text-gray-700 font-light hover:text-gray-900">Resources
+						<svg className="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+						<g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+							<g id="icon-shape">
+								<polygon id="Combined-Shape" points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon></g>
+						</g>
+						</svg>
+				</a>
+				<a href="#" className="flex items-center ml-8 text-sm text-gray-700 font-light hover:text-gray-900">Education
+						<svg className="ml-1 h-4 w-4 fill-current" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+						<g id="Page-1" stroke="none" stroke-width="1" fill-rule="evenodd">
+							<g id="icon-shape">
+								<polygon id="Combined-Shape" points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon></g>
+						</g>
+						</svg>
+				</a>
+				<a href="#" className="flex items-center ml-8 text-sm text-gray-700 font-light hover:text-gray-900">Pricing</a>
+			</div>
+			<div>
+				<a href="#" className="text-sm text-gray-700 font-light hover:text-gray-900">Log in</a>
+				<a href="#" className="ml-4 px-4 py-3 text-sm text-white font-light bg-blue-500 rounded hover:bg-blue-400">Free Trial</a>
+			</div>
+		</div>
+	</nav>
       <main>
-        <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
-          <div
-            className="absolute top-0 w-full h-full bg-center bg-cover"
-            style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')",
-            }}
-          >
-            <span
-              id="blackOverlay"
-              className="w-full h-full absolute opacity-75 bg-black"
-            ></span>
+        <div className="flex pt-32 px-6 md:pt-0 lg:pt-12 items-center justify-center bg-hero md:h-screen overflow-hidden">
+          <div className="flex flex-col md:flex-row items-center max-w-8xl">
+            <div className="w-full md:w-1/2 lg:pr-32">
+              <h2 className="text-4xl lg:text-5xl text-center md:text-left text-blue-900 leading-tight font-medium">
+                There’s a better way to talk with your customers.
+              </h2>
+              <h3 className="mt-6 md:mt-10 text-md lg:text-xl text-center md:text-left text-gray-700 font-light tracking-wider leading-relaxed">
+                Help Scout is designed with your customers in mind. Provide
+                email and live chat with a personal touch, and deliver help
+                content right where your customers need it, all in one place,
+                all for one low price.
+              </h3>
+              <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start">
+                <button className="w-full sm:w-40 px-4 py-3 rounded font-semibold text-md bg-blue-500 text-white border-2 border-blue-500">
+                  Get started
+                </button>
+                <button className="w-full mt-4 sm:mt-0 sm:ml-4 sm:w-40 px-4 py-3 rounded font-semibold text-md bg-white text-blue-500 border-2 border-gray-500">
+                  Watch a Demo
+                </button>
+              </div>
+            </div>
+            <div className="w-full md:w-1/2 flex justify-end">
+              <img src="../assets/img/banner.png"/>
+            </div>
           </div>
-          <div className="container relative mx-auto">
-            <div className="items-center flex flex-wrap">
-              <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                <div className="pr-12">
-                  <h1 className="text-white font-semibold text-5xl">
-                    Your story starts with us.
-                  </h1>
-                  <p className="mt-4 text-lg text-white">
-                    This is a simple example of a Landing Page you can build
-                    using Notus React. It features multiple CSS components based
-                    on the Tailwind CSS design system.
+        </div>
+        <div className="mt-24 p-6">
+          <div className="w-full py-8">
+            <h3 className="w-full lg:w-1/3 m-auto text-center text-2xl md:text-3xl text-blue-900">
+              Help Scout empowers customer-centric businesses with tools that
+              make every interaction more human and helpful.
+            </h3>
+            <hr className="my-8 border-blue-900 w-1/12 mx-auto" />
+          </div>
+          <div className="flex flex-col-reverse md:flex-row m-auto max-w-8xl items-center justify-center">
+            <div className="w-full md:w-2/3">
+              <img src="../assets/img/1.png" />
+            </div>
+            <div className="mt-6 md:mt-0 w-full md:w-1/3">
+              <p className="text-2xl text-gray-500 font-light">Messaging</p>
+              <p className="mt-4 text-3xl text-blue-900">
+                Look and feel matters
+              </p>
+              <p className="py-6 text-gray-600">
+                Replace robo-emails and ticket numbers with emails that were
+                clearly sent by a real person. Fast, friendly, and above all,
+                customer-first.
+              </p>
+              <a className="mt-4 text-blue-500" href="#">
+                More about the help desk
+              </a>
+            </div>
+          </div>
+          <div className="mt-12 md:mt-32 flex flex-col md:flex-row m-auto max-w-8xl items-top justify-center">
+            <div className="w-full md:w-1/3">
+              <div>
+                <p className="text-2xl text-gray-500 font-light">Docs</p>
+                <p className="mt-4 text-3xl text-blue-900">
+                  Make impressive help docs in minutes
+                </p>
+                <p className="py-6 text-gray-600">
+                  Anyone on your team can build out articles that answer common
+                  customer questions. Make Docs public or private—it’s all in
+                  your control.
+                </p>
+                <a className="mt-4 text-blue-500" href="#">
+                  More about Docs &gt;
+                </a>
+              </div>
+              <div className="hidden md:block w-2/3 mt-20">
+                <img className="" src="../assets/img/3.jpg" />
+              </div>
+            </div>
+            <div className="mt-12 md:mt-0 md:ml-12 relative w-full md:w-2/3 px-8 pb-24">
+              <img
+                className="absolute bottom-0 left-0 h-64 z-0"
+                src="../assets/img/dots.jpg"
+              />
+              <img
+                className="relative z-20 shadow md:mx-10"
+                src="../assets/img/2.png"
+              />
+            </div>
+          </div>
+
+          <div className="mt-12 md:mt-32 flex flex-col-reverse md:flex-row m-auto max-w-8xl items-top justify-center">
+            <div className="mt-12 md:mt-0 md:mr-12 relative w-full md:w-2/3 md:pb-24">
+              <img
+                className="relative shadow"
+                src="../assets/img/graph.jpg"
+              />
+            </div>
+            <div className="w-full md:w-1/3">
+              <div>
+                <p className="text-2xl text-gray-500 font-light">Reporting</p>
+                <p className="mt-4 text-3xl text-blue-900">
+                  Look smarter in meetings
+                </p>
+                <p className="py-6 text-gray-600">
+                  Intuitive, built-in reports make for valuable “aha” moments
+                  with your team and your boss. No coding or customizations
+                  required.
+                </p>
+                <a className="mt-4 text-blue-500" href="#">
+                  More about Reporting &gt;
+                </a>
+              </div>
+              <div className="hidden lg:block w-2/3 mt-20 mx-auto">
+                <img className="h-48" src="../assets/img/bag.png" />
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 mx-auto w-full lg:w-2/5 text-center">
+            <p className="text-xl text-gray-600 font-light">Integrations</p>
+            <p className="mt-4 text-3xl text-blue-900 font-semibold">
+              Connect Help Scout with all the things
+            </p>
+            <p className="py-6 text-gray-600">
+              Explore 50+ integrations that make your day-to-day workflow more
+              efficient and familiar. Our extensive developer tools might also
+              strike your fan
+            </p>
+          </div>
+
+          <div className="mt-6 flex flex-wrap max-w-8xl px-8 justify-end m-auto">
+            <div className="p-2 w-full md:w-1/4 lg:w-1/5 bg-gray-200 md:bg-white my-2">
+              <div className="w-full h-full flex justify-center items-center cursor-pointer hover:bg-gray-200">
+                <img className="" src="../assets/img/slack.png" />
+              </div>
+            </div>
+            <div className="p-2 w-full md:w-1/4 lg:w-1/5 bg-gray-200 md:bg-white my-2">
+              <div className="w-full h-full flex relative justify-center items-center cursor-pointer hover:bg-gray-200">
+                <p className="absolute top-0 left-0 p-1 rounded-tl-lg rounded-br-lg uppercase text-white text-xs tracking-wide font-semibold bg-indigo-300">
+                  plus
+                </p>
+                <img className="" src="../assets/img/hubspot.png" />
+              </div>
+            </div>
+            <div className="p-2 w-full md:w-1/4 lg:w-1/5 bg-gray-200 md:bg-white my-2">
+              <div className="w-full h-full flex justify-center items-center cursor-pointer hover:bg-gray-200">
+                <img className="" src="../assets/img/mailchimp.png" />
+              </div>
+            </div>
+            <div className="p-2 w-full md:w-1/4 lg:w-1/5 bg-gray-200 md:bg-white my-2">
+              <div className="w-full h-full flex relative justify-center items-center cursor-pointer hover:bg-gray-200">
+                <p className="absolute top-0 left-0 p-1 rounded-tl-lg rounded-br-lg uppercase text-white text-xs tracking-wide font-semibold bg-indigo-300">
+                  plus
+                </p>
+                <img className="" src="../assets/img/salesforce.png" />
+              </div>
+            </div>
+            <div className="p-2 w-full md:w-1/4 lg:w-1/5 bg-gray-200 md:bg-white my-2">
+              <div className="w-full h-full flex justify-center items-center cursor-pointer hover:bg-gray-200">
+                <img className="" src="../assets/img/woocommerce.png" />
+              </div>
+            </div>
+            <div className="p-2 w-full md:w-1/4 lg:w-1/5 bg-gray-200 md:bg-white my-2">
+              <div className="w-full h-full flex relative justify-center items-center cursor-pointer hover:bg-gray-200">
+                <p className="absolute top-0 left-0 p-1 rounded-tl-lg rounded-br-lg uppercase text-white text-xs tracking-wide font-semibold bg-indigo-300">
+                  plus
+                </p>
+                <img className="" src="../assets/img/jira.png" />
+              </div>
+            </div>
+            <div className="p-2 w-full md:w-1/4 lg:w-1/5 bg-gray-200 md:bg-white my-2">
+              <div className="w-full h-full flex justify-center items-center cursor-pointer hover:bg-gray-200">
+                <img className="" src="../assets/img/shopify.png" />
+              </div>
+            </div>
+            <div className="p-2 w-full md:w-1/4 lg:w-1/5 bg-gray-200 md:bg-white my-2">
+              <div className="w-full h-full flex justify-center items-center cursor-pointer hover:bg-gray-200">
+                <p className="text-sm text-blue-500">View all integrations</p>
+              </div>
+            </div>
+          </div>
+          <div className="mt-24 flex flex-col-reverse md:flex-row items-center justify-center w-full max-w-8xl mx-auto">
+            <div className="w-full md:w-1/2 p-4">
+              <div className="shadow-lg rounded overflow-hidden">
+                <img className="" src="../assets/img/customer.png" />
+                <div className="bg-white p-12">
+                  <p className="font-light text-xl italic font-gray-800">
+                    "I'm not sure how I would be able to do support - at Zapier
+                    or anywhere else - without Help Scout."
+                  </p>
+                  <p className="mt-4 font-light text-sm text-gray-500">
+                    Hoon, Customer Support Pro
+                  </p>
+                  <p className="mt-1 font-semibold text-sm text-gray-900">
+                    Zapier
                   </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div
-            className="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden h-70-px"
-            style={{ transform: "translateZ(0)" }}
-          >
-            <svg
-              className="absolute bottom-0 overflow-hidden"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-              version="1.1"
-              viewBox="0 0 2560 100"
-              x="0"
-              y="0"
-            >
-              <polygon
-                className="text-slate-200 fill-current"
-                points="2560 0 2560 100 0 100"
-              ></polygon>
-            </svg>
+            <div className="flex justify-center items-center w-full md:w-1/2 p-2">
+              <div className="flex flex-col justify-between w-full md:w-3/5">
+                <div className="flex flex-col items-center md:items-start">
+                  <h3 className="text-center md:text-left text-blue-900 font-semibold text-3xl">
+                    Trusted by more than 9,000 businesses in 140 countries.
+                  </h3>
+                  <button className="mt-4 rounded border-2 border-gray-400 hover:border-blue-500 text-md font-semibold text-blue-500 py-3 px-4">
+                    Meet out customers
+                  </button>
+                </div>
+                <div className="mt-6 md:mt-12 flex flex-wrap">
+                  <img
+                    className="w-1/3 py-2"
+                    src="../assets/img/customer-logos/grubhub.png"
+                  />
+                  <img
+                    className="w-1/3 py-2"
+                    src="../assets/img/customer-logos/trello.png"
+                  />
+                  <img
+                    className="w-1/3 py-2"
+                    src="../assets/img/customer-logos/pocket.png"
+                  />
+                  <img
+                    className="w-1/3 py-2"
+                    src="../assets/img/customer-logos/buffer.png"
+                  />
+                  <img
+                    className="w-1/3 py-2"
+                    src="../assets/img/customer-logos/tuftandneedle.png"
+                  />
+                  <img
+                    className="w-1/3 py-2"
+                    src="../assets/img/customer-logos/tradesy.png"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <section className="pb-20 bg-slate-200 -mt-24">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap">
-              <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                  <div className="px-4 py-5 flex-auto">
-                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400">
-                      <i className="fas fa-award"></i>
-                    </div>
-                    <h6 className="text-xl font-semibold">Awarded Agency</h6>
-                    <p className="mt-2 mb-4 text-slate-500">
-                      Divide details about your product or agency work into
-                      parts. A paragraph describing a feature will be enough.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="w-full md:w-4/12 px-4 text-center">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                  <div className="px-4 py-5 flex-auto">
-                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-sky-400">
-                      <i className="fas fa-retweet"></i>
-                    </div>
-                    <h6 className="text-xl font-semibold">Free Revisions</h6>
-                    <p className="mt-2 mb-4 text-slate-500">
-                      Keep you user engaged by providing meaningful information.
-                      Remember that by this time, the user is curious.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-6 w-full md:w-4/12 px-4 text-center">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
-                  <div className="px-4 py-5 flex-auto">
-                    <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-emerald-400">
-                      <i className="fas fa-fingerprint"></i>
-                    </div>
-                    <h6 className="text-xl font-semibold">Verified Company</h6>
-                    <p className="mt-2 mb-4 text-slate-500">
-                      Write a few lines about each one. A paragraph describing a
-                      feature will be enough. Keep you user engaged!
-                    </p>
-                  </div>
-                </div>
-              </div>
+        <div className="p-6 mt-12 md:mt-24 flex justify-center w-full bg-hero">
+          <div className="flex flex-col items-center w-full max-w-8xl">
+            <div className="flex flex-col justify-center">
+              <h3 className="text-blue-900 font-semibold text-center text-3xl">
+                Our people make the difference.
+              </h3>
+              <p className="mt-6 text-gray-600 text-lg text-center leading-normal font-light">
+                We’re an extension of your customer service team, and all of our
+                resources are free
+              </p>
             </div>
-
-            <div className="flex flex-wrap items-center mt-32">
-              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-                <div className="text-slate-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white">
-                  <i className="fas fa-user-friends text-xl"></i>
-                </div>
-                <h3 className="text-3xl mb-2 font-semibold leading-normal">
-                  Working with us is a pleasure
-                </h3>
-                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-slate-600">
-                  Don't let your uses guess by attaching tooltips and popoves to
-                  any element. Just make sure you enable them first via
-                  JavaScript.
-                </p>
-                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-slate-600">
-                  The kit comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go. Just make sure you enable them first via
-                  JavaScript.
-                </p>
-                <Link to="/" className="font-bold text-slate-700 mt-8">
-                  Check Notus React!
-                </Link>
-              </div>
-
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-sky-500">
-                  <img
-                    alt="..."
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
-                    className="w-full align-middle rounded-t-lg"
-                  />
-                  <blockquote className="relative p-8 mb-4">
-                    <svg
-                      preserveAspectRatio="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 583 95"
-                      className="absolute left-0 w-full block h-95-px -top-94-px"
-                    >
-                      <polygon
-                        points="-30,95 583,95 583,65"
-                        className="text-sky-500 fill-current"
-                      ></polygon>
-                    </svg>
-                    <h4 className="text-xl font-bold text-white">
-                      Top Notch Services
-                    </h4>
-                    <p className="text-md font-light mt-2 text-white">
-                      The Arctic Ocean freezes every winter and much of the
-                      sea-ice then thaws every summer, and that process will
-                      continue whatever happens.
+            <div className="mt-12 flex flex-col lg:flex-row w-full">
+              <div className="w-full lg:w-2/5 flex flex-col justify-center">
+                <div className="flex items-center">
+                  <div className="h-32 w-32 p-4">
+                    <img src="../assets/img/trophy.jpg" />
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-lg text-blue-500">
+                      World className 24x6 Support
                     </p>
-                  </blockquote>
+                    <p className="mt-4 text-gray-500">
+                      These friendly and knowledgeable folks are available via
+                      email and chat.
+                    </p>
+                  </div>
                 </div>
+                <div className="mt-6 flex items-center">
+                  <div className="h-32 w-32 p-4">
+                    <img src="../assets/img/laptop.jpg" />
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-lg text-blue-500">
+                      Training & classNamees
+                    </p>
+                    <p className="mt-4 text-gray-500">
+                      Weekly resources designed to help you get the most out of
+                      Help Scout.
+                    </p>
+                  </div>
+                </div>
+                <div className="mt-6 flex items-center">
+                  <div className="h-32 w-32 p-4">
+                    <img src="../assets/img/books.jpg" />
+                  </div>
+                  <div className="flex flex-col">
+                    <p className="text-lg text-blue-500">
+                      Education from HelpU
+                    </p>
+                    <p className="mt-4 text-gray-500">
+                      We’ll teach your team how to master the craft of customer
+                      service.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="w-full lg:w-3/5 flex justify-center lg:justify-end">
+                <img src="../assets/img/people.jpg" />
               </div>
             </div>
           </div>
-        </section>
+        </div>
 
-        <section className="relative py-20">
-          <div
-            className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
-            style={{ transform: "translateZ(0)" }}
-          >
-            <svg
-              className="absolute bottom-0 overflow-hidden"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-              version="1.1"
-              viewBox="0 0 2560 100"
-              x="0"
-              y="0"
-            >
-              <polygon
-                className="text-white fill-current"
-                points="2560 0 2560 100 0 100"
-              ></polygon>
-            </svg>
+        <div className="mt-12 md:mt-32 lg:mt-12 w-full lg:w-2/5 m-auto flex flex-col items-center bg-white p-10">
+          <h3 className="text-blue-900 font-semibold text-center text-3xl">
+            Get started with Help Scout
+          </h3>
+          <p className="mt-6 text-gray-600 text-lg text-center leading-normal font-light">
+            A better experience for your customers, fewer headaches for your
+            team.
+            <br />
+            You'll be set up in minutes.
+          </p>
+          <div className="mt-6 flex flex-col md:flex-row w-full md:px-8">
+            <input
+              className="flex flex-grow px-4 py-2 rounded text-gray-500 border border-gray-500"
+              placeholder="Email Address"
+            />
+            <button className="mt-2 md:mt-0 md:ml-2 bg-blue-500 shadow-lg rounded text-white px-4 py-3">
+              Get Started
+            </button>
           </div>
-
-          <div className="container mx-auto px-4">
-            <div className="items-center flex flex-wrap">
-              <div className="w-full md:w-4/12 ml-auto mr-auto px-4">
-                <img
-                  alt="..."
-                  className="max-w-full rounded-lg shadow-lg"
-                  src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80"
-                />
-              </div>
-              <div className="w-full md:w-5/12 ml-auto mr-auto px-4">
-                <div className="md:pr-12">
-                  <div className="text-sky-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-sky-300">
-                    <i className="fas fa-rocket text-xl"></i>
-                  </div>
-                  <h3 className="text-3xl font-semibold">A growing company</h3>
-                  <p className="mt-4 text-lg leading-relaxed text-slate-500">
-                    The extension comes with three pre-built pages to help you
-                    get started faster. You can change the text and images and
-                    you're good to go.
-                  </p>
-                  <ul className="list-none mt-6">
-                    <li className="py-2">
-                      <div className="flex items-center">
-                        <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-sky-600 bg-sky-200 mr-3">
-                            <i className="fas fa-fingerprint"></i>
-                          </span>
-                        </div>
-                        <div>
-                          <h4 className="text-slate-500">
-                            Carefully crafted components
-                          </h4>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="py-2">
-                      <div className="flex items-center">
-                        <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-sky-600 bg-sky-200 mr-3">
-                            <i className="fab fa-html5"></i>
-                          </span>
-                        </div>
-                        <div>
-                          <h4 className="text-slate-500">
-                            Amazing page examples
-                          </h4>
-                        </div>
-                      </div>
-                    </li>
-                    <li className="py-2">
-                      <div className="flex items-center">
-                        <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-sky-600 bg-sky-200 mr-3">
-                            <i className="far fa-paper-plane"></i>
-                          </span>
-                        </div>
-                        <div>
-                          <h4 className="text-slate-500">Dynamic components</h4>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <p className="mt-6 text-gray-500">
+            See Help Scout in action.
+            <a className="ml-2 text-blue-500" href="#">
+              Get a Demo
+            </a>
+          </p>
+        </div>
+        <div className="flex justify-center">
+          <div className="flex justify-end w-full max-w-8xl">
+            <img className="-mb-4" src="../assets/img/reading.png" />
           </div>
-        </section>
-
-        <section className="pt-20 pb-48">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center text-center mb-24">
-              <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold">Here are our heroes</h2>
-                <p className="text-lg leading-relaxed m-4 text-slate-500">
-                  According to the National Oceanic and Atmospheric
-                  Administration, Ted, Scambos, NSIDClead scentist, puts the
-                  potentially record maximum.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-wrap">
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src={Team1}
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Ryan Tompson</h5>
-                    <p className="mt-1 text-sm text-slate-400 uppercase font-semibold">
-                      Web Developer
-                    </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-facebook-f"></i>
-                      </button>
-                      <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-dribbble"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src={Team2}
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Romina Hadid</h5>
-                    <p className="mt-1 text-sm text-slate-400 uppercase font-semibold">
-                      Marketing Specialist
-                    </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-facebook-f"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src={Team3}
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Alexa Smith</h5>
-                    <p className="mt-1 text-sm text-slate-400 uppercase font-semibold">
-                      UI/UX Designer
-                    </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-slate-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-                <div className="px-6">
-                  <img
-                    alt="..."
-                    src={Team4}
-                    className="shadow-lg rounded-full mx-auto max-w-120-px"
-                  />
-                  <div className="pt-6 text-center">
-                    <h5 className="text-xl font-bold">Jenna Kardi</h5>
-                    <p className="mt-1 text-sm text-slate-400 uppercase font-semibold">
-                      Founder and CEO
-                    </p>
-                    <div className="mt-6">
-                      <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-dribbble"></i>
-                      </button>
-                      <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-google"></i>
-                      </button>
-                      <button
-                        className="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-twitter"></i>
-                      </button>
-                      <button
-                        className="bg-slate-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                        type="button"
-                      >
-                        <i className="fab fa-instagram"></i>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section className="pb-20 relative block bg-slate-800">
-          <div
-            className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
-            style={{ transform: "translateZ(0)" }}
-          >
-            <svg
-              className="absolute bottom-0 overflow-hidden"
-              xmlns="http://www.w3.org/2000/svg"
-              preserveAspectRatio="none"
-              version="1.1"
-              viewBox="0 0 2560 100"
-              x="0"
-              y="0"
-            >
-              <polygon
-                className="text-slate-800 fill-current"
-                points="2560 0 2560 100 0 100"
-              ></polygon>
-            </svg>
-          </div>
-
-          <div className="container mx-auto px-4 lg:pt-24 lg:pb-64">
-            <div className="flex flex-wrap text-center justify-center">
-              <div className="w-full lg:w-6/12 px-4">
-                <h2 className="text-4xl font-semibold text-white">
-                  Build something
-                </h2>
-                <p className="text-lg leading-relaxed mt-4 mb-4 text-slate-400">
-                  Put the potentially record low maximum sea ice extent tihs
-                  year down to low ice. According to the National Oceanic and
-                  Atmospheric Administration, Ted, Scambos.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-wrap mt-12 justify-center">
-              <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-slate-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-medal text-xl"></i>
-                </div>
-                <h6 className="text-xl mt-5 font-semibold text-white">
-                  Excelent Services
-                </h6>
-                <p className="mt-2 mb-4 text-slate-400">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-              <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-slate-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-poll text-xl"></i>
-                </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
-                  Grow your market
-                </h5>
-                <p className="mt-2 mb-4 text-slate-400">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-              <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-slate-800 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-lightbulb text-xl"></i>
-                </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
-                  Launch time
-                </h5>
-                <p className="mt-2 mb-4 text-slate-400">
-                  Some quick example text to build on the card title and make up
-                  the bulk of the card's content.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="relative block py-24 lg:pt-0 bg-slate-800">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-wrap justify-center lg:-mt-64 -mt-48">
-              <div className="w-full lg:w-6/12 px-4">
-                <div className="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-slate-200">
-                  <div className="flex-auto p-5 lg:p-10">
-                    <h4 className="text-2xl font-semibold">
-                      Want to work with us?
-                    </h4>
-                    <p className="leading-relaxed mt-1 mb-4 text-slate-500">
-                      Complete this form and we will get back to you in 24
-                      hours.
-                    </p>
-                    <div className="relative w-full mb-3 mt-8">
-                      <label
-                        className="block uppercase text-slate-600 text-xs font-bold mb-2"
-                        htmlFor="full-name"
-                      >
-                        Full Name
-                      </label>
-                      <input
-                        type="text"
-                        className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Full Name"
-                      />
-                    </div>
-
-                    <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-slate-600 text-xs font-bold mb-2"
-                        htmlFor="email"
-                      >
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                        placeholder="Email"
-                      />
-                    </div>
-
-                    <div className="relative w-full mb-3">
-                      <label
-                        className="block uppercase text-slate-600 text-xs font-bold mb-2"
-                        htmlFor="message"
-                      >
-                        Message
-                      </label>
-                      <textarea
-                        rows={4}
-                        cols={80}
-                        className="border-0 px-3 py-3 placeholder-slate-300 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                        placeholder="Type a message..."
-                      />
-                    </div>
-                    <div className="text-center mt-6">
-                      <button
-                        className="bg-slate-800 text-white active:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                        type="button"
-                      >
-                        Send Message
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
+        
       </main>
       <Footer />
     </>
