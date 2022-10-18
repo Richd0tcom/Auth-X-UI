@@ -24,7 +24,7 @@ export default function Sidebar() {
             className="md:block text-left md:pb-2 text-slate-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
             to="/"
           >
-            Notus React
+            AuthX
           </Link>
           {/* User */}
           <ul className="md:hidden items-center flex flex-wrap list-none">
@@ -50,7 +50,7 @@ export default function Sidebar() {
                     className="md:block text-left md:pb-2 text-slate-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
                     to="/"
                   >
-                    Notus React
+                    AuthX
                   </Link>
                 </div>
                 <div className="w-6/12 flex justify-end">
@@ -88,21 +88,42 @@ export default function Sidebar() {
                 <Link
                   className={
                     "text-xs uppercase py-3 font-bold block " +
-                    (window.location.href.indexOf("/admin/dashboard") !== -1
+                    (window.location.href.indexOf("/admin") !== -1
                       ? "text-sky-500 hover:text-sky-600"
                       : "text-slate-700 hover:text-slate-500")
                   }
-                  to="/admin/dashboard"
+                  to="/admin"
                   >
                   <i
                     className={
                       "fas fa-tv mr-2 text-sm " +
-                      (window.location.href.indexOf("/admin/dashboard") !== -1
+                      (window.location.href.indexOf("/admin") !== -1
                         ? "opacity-75"
                         : "text-slate-300")
                     }
                   ></i>{" "}
                   Dashboard
+                </Link>
+              </li>
+              <li className="items-center">
+                <Link
+                  className={
+                    "text-xs uppercase py-3 font-bold block " +
+                    (window.location.href.indexOf("/admin/dashboard/docs") !== -1
+                      ? "text-sky-500 hover:text-sky-600"
+                      : "text-slate-700 hover:text-slate-500")
+                  }
+                  to="/admin/dashboard/docs"
+                >
+                  <i
+                    className={
+                      "fas fa-table mr-2 text-sm " +
+                      (window.location.href.indexOf("/admin/dashboard/new") !== -1
+                        ? "opacity-75"
+                        : "text-slate-300")
+                    }
+                  ></i>{" "}
+                  Create New Project
                 </Link>
               </li>
 
@@ -146,9 +167,10 @@ export default function Sidebar() {
                         : "text-slate-300")
                     }
                   ></i>{" "}
-                  Tables
+                  Docs
                 </Link>
               </li>
+              
 
               
             </ul>
@@ -198,7 +220,7 @@ export default function Sidebar() {
                   to="/"
                 >
                   <i className="fas fa-newspaper text-slate-400 mr-2 text-sm"></i>{" "}
-                  Landing Page
+                  Create new Project
                 </Link>
               </li>
 

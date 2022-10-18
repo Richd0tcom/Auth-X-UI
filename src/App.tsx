@@ -1,74 +1,82 @@
-import { useState } from 'react'
-import ReactDOM from "react-dom";
-import { BrowserRouter, Route, RedirectFunction, Routes } from "react-router-dom";
-
+import { useState } from 'react';
+import ReactDOM from 'react-dom';
+import {
+  BrowserRouter,
+  Route,
+  RedirectFunction,
+  Routes,
+} from 'react-router-dom';
 
 // layouts
 
-import Admin from "./layouts/Admin";
+import Admin from './layouts/Admin';
 // import Auth from "./layouts/Auth.js";
-import Auth from "./layouts/Auth"
+import Auth from './layouts/Auth';
 
 // views without layouts
 
-import Landing from "./views/Landing";
-import Profile from "./views/Profile";
-import Dashboard from "./views/admin/Dashboard";
+import Landing from './views/Landing';
+import Profile from './views/Profile';
+import Dashboard from './views/admin/Dashboard';
 
-import Settings from "./views/admin/Settings";
-import Tables from "./views/admin/Tables";
+import Settings from './views/admin/Settings';
+import Tables from './views/admin/Tables';
 import Register from './views/auth/Register';
 import Login from './views/auth/Login';
 
-import CardSettings from "./components/Cards/CardSettings";
-import CardProfile from "./components/Cards/CardProfile";
+import CardSettings from './components/Cards/CardSettings';
+import CardProfile from './components/Cards/CardProfile';
+import DevLanding from './views/DevLanding';
 
-function DeveloperSettings(){
+function DeveloperSettings() {
   return (
-    <div className="w-full lg:w-8/12 px-4 mt-32">
-          <CardSettings />
+    <div className='w-full lg:w-8/12 px-4 mt-32'>
+      <CardSettings />
     </div>
-  )
+  );
 }
-function DeveloperProfile(){
+function DeveloperProfile() {
   return (
-    <div className="w-full  px-4 mt-32">
-          <CardProfile />
+    <div className='w-full  px-4 mt-32'>
+      <CardProfile />
     </div>
-  )
+  );
 }
 
 function App() {
-  
-
   return (
     <BrowserRouter>
-    <Routes>
-      {/* add routes with layouts */}
-      <Route path="/admin" element={<Admin/>} >
-        <Route path="/admin/dashboard" element={<Dashboard />} />
-              <Route path="/admin/dashboard/settings" element={<Settings />} >
-                  <Route path="/admin/dashboard/settings/edit" element={<DeveloperSettings/>}/>
-                  <Route path="/admin/dashboard/settings/profile" element={<DeveloperProfile/>}/>
-              </Route>
-        
-        <Route path="/admin/dashboard/docs" element={<Tables />} />
-      </Route>
-      <Route path="/auth" element={<Auth />} >
-            <Route path="/auth/login" element={<Login />} />
-            <Route path="/auth/register" element={<Register />} />
-      </Route>
-      {/* add routes without layouts */}
-      <Route path="/"  element={<Landing />} />
-      <Route path="/profile"  element={<Profile />} />
+      <Routes>
+        {/* add routes with layouts */}
+        <Route path='/admin' element={<Admin />}>
+          <Route index element={<Dashboard />} />
+          <Route path='dashboard/settings' element={<Settings />}>
+            <Route
+              path='edit'
+              element={<DeveloperSettings />}
+            />
+            <Route
+              path='profile'
+              element={<DeveloperProfile />}
+            />
+          </Route>
 
-      
-      {/* add redirect for first page */}
-      {/* <Redirect from="*" to="/" /> */}
+          <Route path='dashboard/docs' element={<Tables />} />
+        </Route>
+        <Route path='/auth' element={<Auth />}>
+          <Route path='/auth/login' element={<Login />} />
+          <Route path='/auth/register' element={<Register />} />
+        </Route>
+        {/* add routes without layouts */}
+        <Route path='/' element={<Landing />} />
+        <Route path='/developer' element={<DevLanding />} />
+        <Route path='/profile' element={<Profile />} />
 
-    </Routes>
-  </BrowserRouter>
-  )
+        {/* add redirect for first page */}
+        {/* <Redirect from="*" to="/" /> */}
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
