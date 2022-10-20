@@ -5,7 +5,7 @@ import GithubIcon from '../../assets/img/github.svg';
 import GoogleIcon from '../../assets/img/google.svg';
 
 
-export default function Login() {
+export default function DeveloperLogin() {
   return (
     <>
       <main>

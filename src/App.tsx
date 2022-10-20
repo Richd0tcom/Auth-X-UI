@@ -63,10 +63,10 @@ function App() {
 
           <Route path='dashboard/docs' element={<Tables />} />
         </Route>
-        <Route path='/auth' element={<Auth />}>
-          <Route path='/auth/login' element={<Login />} />
-          <Route path='/auth/register' element={<Register />} />
-        </Route>
+        
+        <Route path='login' element={<Login />} />
+        <Route path='register' element={<Register />} />
+       
         {/* add routes without layouts */}
         <Route path='/' element={<Landing />} />
         <Route path='/developer' element={<DevLanding />} />

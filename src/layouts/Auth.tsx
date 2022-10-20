@@ -1,5 +1,5 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Navigate, Outlet, useNavigate } from "react-router-dom";
 
 // components
 
@@ -15,19 +15,21 @@ import Register from "../views/auth/Register";
 // const xhiuoeu = require("assets/img/register_bg_2.png")
 
 export default function Auth() {
+  const navigate = useNavigate()
+  // useEffect(()=>{
+  //   navigate("login")
+  // },[])
   return (
     <>
-      <Navbar transparent />
       <main>
         <section className="relative w-full h-full py-40 min-h-screen">
-          <div
+          {/* <div
             className="absolute top-0 w-full h-full bg-slate-800 bg-no-repeat bg-full"
             style={{
               backgroundImage: `url("../assets/img/register_bg_2.png")`,
             }}
           ></div>
-          <Outlet />
-          <FooterSmall absolute />
+          <Outlet /> */}
         </section>
       </main>
     </>
